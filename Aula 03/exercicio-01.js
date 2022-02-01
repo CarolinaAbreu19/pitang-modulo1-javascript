@@ -7,17 +7,14 @@ class Automovel {
     }
 
     getAutomovel() {
-        return [
-            this.nome,
-            this.marca,
-            this.modelo,
-            this.paisOrigem
-        ]
+        return { ...this }
     }
 };
 
-const automovel1 = new Automovel("Gary?", "Fiat", "Uno", "...Inglaterra?");
+const automovel1 = new Automovel("Celta", "Fiat", "2012", "...Inglaterra?");
 const automovel2 = new Automovel("Luigi", "Ferrari", "...Vermelha?", "Itália");
+
+console.log(automovel1.getAutomovel());
 
 const lista = [automovel1, automovel2];
 for(let automovel of lista) {
